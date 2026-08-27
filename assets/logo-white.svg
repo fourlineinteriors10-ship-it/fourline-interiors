@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80" fill="none" class="fourline-logo-svg">
+  <!-- Four Iconic Brand Lines -->
+  <g class="brand-lines" transform="translate(0, 16)">
+    <!-- Line 1: Red -->
+    <rect x="0" y="0" width="38" height="4" rx="2" fill="#E63946" />
+    <!-- Line 2: Orange -->
+    <rect x="0" y="11" width="38" height="4" rx="2" fill="#FB8500" />
+    <!-- Line 3: Yellow -->
+    <rect x="0" y="22" width="38" height="4" rx="2" fill="#FFB703" />
+    <!-- Line 4: Blue -->
+    <rect x="0" y="33" width="38" height="4" rx="2" fill="#0077B6" />
+  </g>
+  
+  <!-- Wordmark Text -->
+  <g class="brand-text" transform="translate(54, 0)">
+    <!-- FOURLINE -->
+    <text x="0" y="38" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-weight="800" font-size="28" letter-spacing="4" fill="#FFFFFF">FOUR<tspan fill="#C89A55">LINE</tspan></text>
+    <!-- INTERIORS & SUBTITLE -->
+    <text x="2" y="58" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-weight="600" font-size="11" letter-spacing="6.5" fill="#A8A29E">INTERIORS</text>
+  </g>
+</svg>

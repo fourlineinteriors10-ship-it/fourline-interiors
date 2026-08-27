@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore Selected Projects by FOURLINE INTERIORS — Luxury residential apartments, sea-facing penthouses, tropical modern villas, and corporate headquarters." />
+  <title>Selected Projects — FOURLINE INTERIORS</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Custom Luxury Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <!-- Header -->
+  <header class="site-header scrolled" id="mainHeader">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo-link">
+        <img src="assets/logo-white.svg" alt="Fourline Interiors Logo" class="logo-img" />
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link active">Projects</a>
+        <a href="index.html#concept" class="nav-link">Philosophy</a>
+        <a href="index.html#services" class="nav-link">Services</a>
+        <a href="index.html#process" class="nav-link">Process</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="contact.html" class="btn-header-cta">
+          <span>Start a Project</span>
+          <span class="cta-arrow">→</span>
+        </a>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <nav class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link"><span class="nav-num">01</span> Home</a>
+      <a href="about.html" class="mobile-nav-link"><span class="nav-num">02</span> About</a>
+      <a href="projects.html" class="mobile-nav-link active"><span class="nav-num">03</span> Selected Projects</a>
+      <a href="index.html#concept" class="mobile-nav-link"><span class="nav-num">04</span> Fourline Concept</a>
+      <a href="index.html#services" class="mobile-nav-link"><span class="nav-num">05</span> Services</a>
+      <a href="contact.html" class="mobile-nav-link"><span class="nav-num">06</span> Contact</a>
+    </nav>
+  </div>
+
+  <!-- Page Hero Banner -->
+  <section class="section" style="background-color: var(--bg-dark); color: #FFFFFF; padding-top: 10rem; padding-bottom: 4rem; border-bottom: 1px solid rgba(255,255,255,0.08);">
+    <div class="container">
+      <div class="section-tag">
+        <div class="fourline-brand-bar">
+          <span class="line-1"></span>
+          <span class="line-2"></span>
+          <span class="line-3"></span>
+          <span class="line-4"></span>
+        </div>
+        <span style="color: var(--gold-primary);">Complete Portfolio</span>
+      </div>
+      <h1 class="section-title light" style="max-width: 850px;">Architectural Portfolio & Selected Works</h1>
+      <p class="section-subtitle light" style="max-width: 700px;">
+        An exhaustive compendium of completed turnkey residences, duplexes, penthouses, and bespoke workspaces crafted across India.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects Grid Section -->
+  <section class="section projects-section">
+    <div class="container">
+      <div class="projects-header-wrapper">
+        <div class="project-filter-tabs">
+          <button class="filter-btn active" data-filter="all">All Projects (6)</button>
+          <button class="filter-btn" data-filter="residential">Residential</button>
+          <button class="filter-btn" data-filter="commercial">Commercial</button>
+          <button class="filter-btn" data-filter="villas">Luxury Villas</button>
+        </div>
+      </div>
+
+      <div class="projects-masonry-grid" id="projectsGrid"></div>
+    </div>
+  </section>
+
+  <!-- Before & After Transformation Section -->
+  <section class="section before-after-section" style="border-top: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div style="text-align: center; max-width: 760px; margin: 0 auto 3rem;">
+        <div class="section-tag" style="justify-content: center;">
+          <span class="tag-line"></span>
+          <span>Craft in Real-Time</span>
+        </div>
+        <h2 class="section-title">Before vs. Handover Quality</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">
+          Witness how our dedicated project managers and craftspeople elevate raw concrete into architectural luxury.
+        </p>
+      </div>
+
+      <div class="before-after-container">
+        <div class="ba-image-layer ba-before-wrapper">
+          <img src="https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=1600&q=85" alt="Bare Demolished Site" />
+          <span class="ba-badge badge-before">Bare Commercial Shell</span>
+        </div>
+        <div class="ba-image-layer ba-after-wrapper">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=85" alt="Completed Executive Lounge" />
+          <span class="ba-badge badge-after">Completed Executive HQ</span>
+        </div>
+        <div class="ba-handle">
+          <div class="ba-handle-button">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8L22 12L18 16"/><path d="M6 8L2 12L6 16"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <img src="assets/logo-white.svg" alt="Fourline Interiors" class="footer-logo-img" />
+          <p class="footer-tagline">
+            Fourline Interiors is an international interior architecture and turnkey execution studio crafting refined spaces defined by light, material, and purpose.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-heading">Navigation</div>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Studio</a></li>
+            <li><a href="projects.html" class="footer-link">Selected Projects</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Typologies</div>
+          <ul class="footer-links">
+            <li><a href="projects.html" class="footer-link">Sea-Facing Penthouses</a></li>
+            <li><a href="projects.html" class="footer-link">Bespoke Villas</a></li>
+            <li><a href="projects.html" class="footer-link">Corporate Offices</a></li>
+            <li><a href="projects.html" class="footer-link">Luxury Duplexes</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Studio Connect</div>
+          <p style="font-size: 0.875rem; margin-bottom: 1rem;">
+            Bandra West, Mumbai 400050<br />
+            studio@fourlineinteriors.com • +91 98200 45678
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div>© 2026 Fourline Interiors. All Rights Reserved.</div>
+        <div>Interior Design • Architecture • Execution</div>
+        <a href="#mainHeader" class="back-to-top-btn">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Detail Modal -->
+  <div class="project-modal" id="projectModal">
+    <div class="modal-content-wrapper">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Modal">✕</button>
+      <div id="modalContentBody"></div>
+    </div>
+  </div>
+
+  <script src="js/projects-data.js"></script>
+  <script src="js/before-after.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
