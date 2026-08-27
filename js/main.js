@@ -524,7 +524,7 @@ function initContactForm() {
     }
 
     setTimeout(() => {
-      window.open(`https://wa.me/919820000000?text=${whatsappMessage}`, '_blank');
+      window.open(`https://wa.me/918169316433?text=${whatsappMessage}`, '_blank');
       form.reset();
     }, 1200);
   });

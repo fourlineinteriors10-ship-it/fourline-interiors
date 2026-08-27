@@ -66,6 +66,16 @@ npx serve .
 
 ---
 
+---
+
+## 📍 Studio Contact
+
+* **Address**: Shop No. 2, Sonar Gram CHS., LM Road, Navagaon, Dahisar West, Mumbai
+* **Phone / WhatsApp**: [+91 81693 16433](https://wa.me/918169316433)
+* **Email**: [fourlineinteriors10@gmail.com](mailto:fourlineinteriors10@gmail.com)
+
+---
+
 ## 📜 License & Copyright
 
 © 2026 Fourline Interiors. All Rights Reserved.
