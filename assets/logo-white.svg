@@ -1,21 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80" fill="none" class="fourline-logo-svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 62" fill="none" class="fourline-logo-svg">
   <!-- Four Iconic Brand Lines -->
-  <g class="brand-lines" transform="translate(0, 16)">
+  <g class="brand-lines" transform="translate(2, 6)">
     <!-- Line 1: Red -->
-    <rect x="0" y="0" width="38" height="4" rx="2" fill="#E63946" />
+    <path d="M6 0H42C43.1046 0 44 0.89543 44 2C44 3.10457 43.1046 4 42 4H2C0.89543 4 0.177 2.823 0.732 1.868L1.815 0H6Z" fill="#E63946" />
     <!-- Line 2: Orange -->
-    <rect x="0" y="11" width="38" height="4" rx="2" fill="#FB8500" />
+    <path d="M6 13H42C43.1046 13 44 13.8954 44 15C44 16.1046 43.1046 17 42 17H2C0.89543 17 0.177 15.823 0.732 14.868L1.815 13H6Z" fill="#FB8500" />
     <!-- Line 3: Yellow -->
-    <rect x="0" y="22" width="38" height="4" rx="2" fill="#FFB703" />
+    <path d="M6 26H42C43.1046 26 44 26.8954 44 28C44 29.1046 43.1046 30 42 30H2C0.89543 30 0.177 28.823 0.732 27.868L1.815 26H6Z" fill="#FFB703" />
     <!-- Line 4: Blue -->
-    <rect x="0" y="33" width="38" height="4" rx="2" fill="#0077B6" />
+    <path d="M6 39H42C43.1046 39 44 39.8954 44 41C44 42.1046 43.1046 43 42 43H2C0.89543 43 0.177 41.823 0.732 40.868L1.815 39H6Z" fill="#0077B6" />
   </g>
   
   <!-- Wordmark Text -->
-  <g class="brand-text" transform="translate(54, 0)">
+  <g class="brand-text" transform="translate(58, 0)">
     <!-- FOURLINE -->
-    <text x="0" y="38" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-weight="800" font-size="28" letter-spacing="4" fill="#FFFFFF">FOUR<tspan fill="#C89A55">LINE</tspan></text>
-    <!-- INTERIORS & SUBTITLE -->
-    <text x="2" y="58" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-weight="600" font-size="11" letter-spacing="6.5" fill="#A8A29E">INTERIORS</text>
+    <text x="0" y="32" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-weight="800" font-size="28" letter-spacing="3" fill="#FFFFFF">FOUR<tspan fill="#C89A55">LINE</tspan></text>
+    <!-- INTERIORS -->
+    <text x="2" y="49" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-weight="700" font-size="10.5" letter-spacing="6.8" fill="#B5AEA5">INTERIORS</text>
   </g>
 </svg>

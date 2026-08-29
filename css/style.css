@@ -305,9 +305,13 @@ body.cursor-active .cursor-follower {
 }
 
 .brand-logo-link .logo-img {
-  height: 34px;
+  height: 48px;
   width: auto;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, height 0.3s ease;
+}
+
+.site-header.scrolled .brand-logo-link .logo-img {
+  height: 40px;
 }
 
 .nav-menu {
@@ -1903,7 +1907,8 @@ body.cursor-active .cursor-follower {
 }
 
 .footer-brand-col .footer-logo-img {
-  height: 38px;
+  height: 50px;
+  width: auto;
   margin-bottom: 1.25rem;
 }
 
@@ -2247,7 +2252,7 @@ body.cursor-active .cursor-follower {
     padding: 0.875rem 0;
   }
   .brand-logo-link .logo-img {
-    height: 28px;
+    height: 36px;
   }
   .btn-header-cta {
     display: none; /* Keep header clean on mobile, available in mobile drawer */
