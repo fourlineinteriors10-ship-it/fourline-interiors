@@ -72,14 +72,13 @@
       <a href="#concept" class="mobile-nav-link"><span class="nav-num">04</span> Fourline Concept</a>
       <a href="#services" class="mobile-nav-link"><span class="nav-num">05</span> Services</a>
       <a href="#process" class="mobile-nav-link"><span class="nav-num">06</span> Process</a>
-      <a href="#estimator" class="mobile-nav-link"><span class="nav-num">07</span> Cost Estimator</a>
-      <a href="#contact" class="mobile-nav-link"><span class="nav-num">08</span> Contact</a>
+      <a href="#contact" class="mobile-nav-link"><span class="nav-num">07</span> Contact</a>
     </nav>
     <div class="mobile-drawer-footer">
       <a href="#contact" class="btn-primary" style="text-align: center; width: 100%;">Start a Project</a>
       <div class="mobile-drawer-contact">
         <p>Shop No. 2, Sonar Gram CHS., LM Road, Navagaon, Dahisar West, Mumbai</p>
-        <p><a href="mailto:fourlineinteriors10@gmail.com">fourlineinteriors10@gmail.com</a> • <a href="tel:+918169316433">+91 81693 16433</a></p>
+        <p><a href="mailto:info@fourlineinteriors.in">info@fourlineinteriors.in</a> • <a href="tel:+918169316433">+91 81693 16433</a></p>
       </div>
     </div>
   </div>
@@ -589,92 +588,7 @@
     </div>
   </section>
 
-  <!-- ==========================================================================
-       INTERACTIVE COST ESTIMATOR / BUDGET PLANNER
-       ========================================================================== -->
-  <section class="section calculator-section" id="estimator" style="display:none">
-    <div class="container">
-      <div style="text-align: center; max-width: 780px; margin: 0 auto;">
-        <div class="section-tag" style="justify-content: center;">
-          <span class="tag-line"></span>
-          <span>Client Planning Tool</span>
-        </div>
-        <h2 class="section-title">Interior Investment Calculator</h2>
-        <p class="section-subtitle" style="margin: 0 auto;">
-          Estimate the turnkey investment scope for your residential residence, penthouse, or corporate workspace.
-        </p>
-      </div>
 
-      <div class="calculator-container-box">
-        <div class="calc-grid">
-          <!-- Left: Options Selection -->
-          <div class="calc-options-col">
-            <!-- Property Type -->
-            <div>
-              <div class="calc-group-title">1. Select Property Typology</div>
-              <div class="calc-chips-grid">
-                <button type="button" class="calc-chip calc-type-chip active" data-type="residential">2BHK / 3BHK Residence</button>
-                <button type="button" class="calc-chip calc-type-chip" data-type="penthouse">4BHK / Penthouse</button>
-                <button type="button" class="calc-chip calc-type-chip" data-type="villa">Bespoke Villa</button>
-                <button type="button" class="calc-chip calc-type-chip" data-type="commercial">Corporate Office</button>
-              </div>
-            </div>
-
-            <!-- Execution Tier -->
-            <div>
-              <div class="calc-group-title">2. Select Finish & Material Tier</div>
-              <div class="calc-chips-grid">
-                <button type="button" class="calc-chip calc-tier-chip" data-tier="essential">Essential Luxury (₹1,600/sq.ft)</button>
-                <button type="button" class="calc-chip calc-tier-chip active" data-tier="bespoke">Bespoke Architectural (₹2,400/sq.ft)</button>
-                <button type="button" class="calc-chip calc-tier-chip" data-tier="ultra">Ultra Connoisseur (₹3,600/sq.ft)</button>
-              </div>
-            </div>
-
-            <!-- Built Up Area Slider -->
-            <div>
-              <div class="calc-group-title">3. Carpet / Built-Up Area (sq.ft)</div>
-              <div class="calc-slider-wrapper">
-                <input type="range" min="800" max="10000" step="100" value="2200" class="calc-range-slider" id="calcAreaSlider" />
-                <div class="calc-area-value">
-                  <span>800 sq.ft</span>
-                  <strong id="calcAreaDisplay" style="color: var(--text-primary); font-size: 1.125rem;">2,200 sq.ft</strong>
-                  <span>10,000 sq.ft</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right: Dynamic Estimate Card -->
-          <div class="calc-result-card">
-            <div>
-              <div class="calc-result-title">Estimated Turnkey Scope</div>
-              <div class="calc-price-display" id="calcPriceDisplay">₹48L – ₹58L*</div>
-              <p style="font-size: 0.8125rem; color: var(--text-light-muted); line-height: 1.6;">
-                *Comprehensive estimate including spatial planning, 3D visualization, civil alterations, custom millwork, electrical MEP, false ceiling, and premium surface finishes.
-              </p>
-
-              <div class="calc-breakdown-list">
-                <div class="calc-breakdown-item">
-                  <span>Execution Tier:</span>
-                  <span id="calcScopeDisplay">Bespoke Architectural Grade</span>
-                </div>
-                <div class="calc-breakdown-item">
-                  <span>Estimated Timeline:</span>
-                  <span id="calcTimelineDisplay">4.5 – 6 Months</span>
-                </div>
-                <div class="calc-breakdown-item">
-                  <span>Management:</span>
-                  <span>100% Dedicated Studio Site Lead</span>
-                </div>
-              </div>
-            </div>
-
-            <a href="#contact" class="btn-primary" style="width: 100%; text-align: center;">Book Consultation for this Project</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
 
   <!-- ==========================================================================
@@ -788,17 +702,19 @@
             <div class="form-group">
               <label class="form-label" for="projectType">Space Typology</label>
               <select id="projectType" name="projectType" class="form-select" required>
-                <option value="Luxury Apartment (2BHK / 3BHK / 4BHK)">Luxury Apartment (2BHK / 3BHK / 4BHK)</option>
+                <option value="Luxury Apartment (2BHK / 3BHK / 4BHK)">Luxury Apartment (1BHK/ 2BHK / 3BHK )</option>
                 <option value="Penthouse Suite">Penthouse Suite</option>
                 <option value="Private Villa / Bungalow">Private Villa / Bungalow</option>
                 <option value="Corporate Office / Commercial">Corporate Office / Commercial</option>
                 <option value="Hospitality / Retail Space">Hospitality / Retail Space</option>
+                  <option value="Other">Other</option>
               </select>
             </div>
 
-            <div class="form-group">
+            <div class="form-group" style="display:none">
               <label class="form-label" for="budgetTier">Target Investment Tier</label>
               <select id="budgetTier" name="budgetTier" class="form-select">
+                <option value="not provided">not provided</option>
                 <option value="₹15 Lakhs – ₹25 Lakhs">₹15 Lakhs – ₹25 Lakhs</option>
                 <option value="₹25 Lakhs – ₹45 Lakhs" selected>₹25 Lakhs – ₹45 Lakhs (Most Popular)</option>
                 <option value="₹45 Lakhs – ₹75 Lakhs">₹45 Lakhs – ₹75 Lakhs</option>
@@ -852,7 +768,6 @@
             <li><a href="#concept" class="footer-link">Fourline Concept</a></li>
             <li><a href="#services" class="footer-link">Services</a></li>
             <li><a href="#process" class="footer-link">Design Process</a></li>
-            <li><a href="#estimator" class="footer-link">Budget Estimator</a></li>
           </ul>
         </div>
 

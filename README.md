@@ -24,9 +24,8 @@ Fourline Interiors operates at the intersection of architectural rigor and artis
 * **Asymmetric Masonry Portfolio**: Filterable project gallery (Residential, Commercial, Luxury Villas) with hover zoom and quick-view detail modal.
 * **Interactive Project Detail Modal**: Complete with material palette swatches, specifications grid, photo gallery, and before/after comparisons.
 * **Interactive Before & After Transformation Slider**: Draggable comparison slider showing raw construction shells transformed into turnkey masterworks.
-* **Interactive Interior Investment Estimator**: Dynamic budget and timeline calculator for projects from ₹15L to ₹75L+.
 * **Animated Project Metrics**: Counter animations for completed projects, years of experience, and team experts.
-* **Client Testimonials & Instagram Journal**: Editorial review carousel and visual lifestyle feed.
+* **Visual Journal (Instagram Chronicle)**: Curated architectural and interior styling feed.
 * **Consultation Booking & WhatsApp Integration**: Direct studio connection for rapid project inquiries.
 * **Zero-Dependency Lightweight Build**: Pure HTML5, modern CSS3, and ES6 JavaScript for fast load times.
 

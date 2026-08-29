@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjectModal();
   initBeforeAfterSliders();
   initCounters();
-  initCostEstimator();
   initVisualJournal();
   initContactForm();
   initSmoothScroll();
@@ -353,71 +352,6 @@ function initCounters() {
   }
 }
 
-/* ==========================================================================
-   7. Interactive Studio Cost Estimator
-   ========================================================================== */
-function initCostEstimator() {
-  const typeChips = document.querySelectorAll('.calc-type-chip');
-  const tierChips = document.querySelectorAll('.calc-tier-chip');
-  const areaSlider = document.getElementById('calcAreaSlider');
-  const areaValueDisplay = document.getElementById('calcAreaDisplay');
-  const priceDisplay = document.getElementById('calcPriceDisplay');
-  const timelineDisplay = document.getElementById('calcTimelineDisplay');
-  const scopeDisplay = document.getElementById('calcScopeDisplay');
-
-  if (!areaSlider || !priceDisplay) return;
-
-  let selectedType = 'residential';
-  let selectedTier = 'bespoke'; // 'essential', 'bespoke', 'ultra'
-  let areaSqFt = parseInt(areaSlider.value, 10);
-
-  const rates = {
-    essential: { rate: 1600, label: "Essential Luxury Execution", speed: 450 },
-    bespoke: { rate: 2400, label: "Bespoke Architectural Grade", speed: 400 },
-    ultra: { rate: 3600, label: "Ultra-Luxury Connoisseur Tier", speed: 350 }
-  };
-
-  function updateCalculation() {
-    const tierData = rates[selectedTier];
-    const estimatedCostLakhs = (areaSqFt * tierData.rate) / 100000;
-    const minLakhs = Math.max(10, Math.round(estimatedCostLakhs * 0.95));
-    const maxLakhs = Math.round(estimatedCostLakhs * 1.1);
-
-    priceDisplay.textContent = `₹${minLakhs}L – ₹${maxLakhs}L*`;
-
-    // Estimate timeline in months
-    const months = Math.max(3, Math.ceil(areaSqFt / tierData.speed));
-    timelineDisplay.textContent = `${months} – ${months + 1.5} Months`;
-    scopeDisplay.textContent = tierData.label;
-  }
-
-  typeChips.forEach(chip => {
-    chip.addEventListener('click', () => {
-      typeChips.forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
-      selectedType = chip.getAttribute('data-type');
-      updateCalculation();
-    });
-  });
-
-  tierChips.forEach(chip => {
-    chip.addEventListener('click', () => {
-      tierChips.forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
-      selectedTier = chip.getAttribute('data-tier');
-      updateCalculation();
-    });
-  });
-
-  areaSlider.addEventListener('input', (e) => {
-    areaSqFt = parseInt(e.target.value, 10);
-    areaValueDisplay.textContent = `${areaSqFt.toLocaleString()} sq.ft`;
-    updateCalculation();
-  });
-
-  // Initial run
-  updateCalculation();
-}
 
 
 /* ==========================================================================
