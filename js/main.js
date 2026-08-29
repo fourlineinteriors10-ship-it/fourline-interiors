@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initBeforeAfterSliders();
   initCounters();
   initCostEstimator();
-  initTestimonials();
   initVisualJournal();
   initContactForm();
   initSmoothScroll();
@@ -420,60 +419,6 @@ function initCostEstimator() {
   updateCalculation();
 }
 
-/* ==========================================================================
-   8. Testimonial Carousel
-   ========================================================================== */
-function initTestimonials() {
-  const container = document.getElementById('testimonialSlideContainer');
-  const prevBtn = document.getElementById('tPrevBtn');
-  const nextBtn = document.getElementById('tNextBtn');
-
-  if (!container || typeof FOURLINE_TESTIMONIALS === 'undefined') return;
-
-  // Render slides
-  container.innerHTML = FOURLINE_TESTIMONIALS.map((t, idx) => `
-    <div class="testimonial-slide ${idx === 0 ? 'active' : ''}">
-      <div style="display: flex; gap: 4px; margin-bottom: 1.5rem; color: var(--gold-primary);">
-        ${'★'.repeat(t.rating)}
-      </div>
-      <blockquote class="testimonial-quote">“${t.quote}”</blockquote>
-      <div class="testimonial-author-row">
-        <div>
-          <div class="author-name">${t.author}</div>
-          <div class="author-project">${t.designation}</div>
-        </div>
-        <span class="modal-chip" style="color: var(--gold-dark); border-color: var(--border-medium);">${t.projectType}</span>
-      </div>
-    </div>
-  `).join('');
-
-  const slides = container.querySelectorAll('.testimonial-slide');
-  let currentIndex = 0;
-
-  function showSlide(index) {
-    slides.forEach((s, i) => s.classList.toggle('active', i === index));
-  }
-
-  if (nextBtn) {
-    nextBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % slides.length;
-      showSlide(currentIndex);
-    });
-  }
-
-  if (prevBtn) {
-    prevBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-      showSlide(currentIndex);
-    });
-  }
-
-  // Auto-play interval
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % slides.length;
-    showSlide(currentIndex);
-  }, 7000);
-}
 
 /* ==========================================================================
    9. Visual Journal / Instagram Feed
