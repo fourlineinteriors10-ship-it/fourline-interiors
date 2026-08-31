@@ -89,6 +89,64 @@
     </div>
   </section>
 
+  <!-- ==========================================================================
+       STUDIO PORTFOLIO GALLERY (AUTHENTIC ON-SITE EXECUTION WORKS)
+       ========================================================================== -->
+  <section class="section portfolio-gallery-section" id="portfolio" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="portfolio-gallery-header">
+        <div>
+          <div class="section-tag">
+            <div class="fourline-brand-bar">
+              <span class="line-1"></span>
+              <span class="line-2"></span>
+              <span class="line-3"></span>
+              <span class="line-4"></span>
+            </div>
+            <span>Studio Portfolio</span>
+          </div>
+          <h2 class="section-title">On-Site Execution Archive</h2>
+          <p class="section-subtitle">
+            Authentic photographs of completed living spaces, luxury master bedrooms, modular kitchens, and corporate spaces crafted by our on-site team.
+          </p>
+        </div>
+
+        <!-- Direct PDF Portfolio Access -->
+        <a href="portfolio.pdf" target="_blank" class="pdf-download-card" title="Download Complete Portfolio PDF">
+          <div class="pdf-icon-badge">PDF</div>
+          <div class="pdf-download-text">
+            <div class="pdf-title">
+              <span>View Portfolio PDF</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </div>
+            <div class="pdf-subtitle">27-Page Official Studio Portfolio</div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Gallery Category Filter Tabs -->
+      <div class="gallery-filter-tabs">
+        <button class="gallery-filter-btn active" data-filter="all">All Works (35)</button>
+        <button class="gallery-filter-btn" data-filter="living">Living & Lounges</button>
+        <button class="gallery-filter-btn" data-filter="bedroom">Luxury Bedrooms</button>
+        <button class="gallery-filter-btn" data-filter="kitchen">Modular Kitchens</button>
+        <button class="gallery-filter-btn" data-filter="commercial">Workspaces & Offices</button>
+        <button class="gallery-filter-btn" data-filter="craft">Bespoke Millwork</button>
+      </div>
+
+      <!-- Masonry Gallery Grid -->
+      <div class="portfolio-gallery-grid" id="portfolioGalleryGrid"></div>
+
+      <!-- Action Bar: Show All / Show Less -->
+      <div class="gallery-action-bar">
+        <button class="gallery-load-btn" id="galleryLoadMoreBtn">
+          View All 35 Works
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
   <!-- Before & After Transformation Section -->
   <section class="section before-after-section" style="border-top: 1px solid var(--border-subtle);">
     <div class="container">
@@ -174,6 +232,31 @@
     <div class="modal-content-wrapper">
       <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Modal">✕</button>
       <div id="modalContentBody"></div>
+    </div>
+  </div>
+
+  <!-- Fullscreen Portfolio Execution Lightbox -->
+  <div class="gallery-lightbox" id="galleryLightbox" role="dialog" aria-modal="true" aria-label="Portfolio Image Viewer">
+    <div class="lightbox-topbar">
+      <span class="lightbox-counter" id="lightboxCounter">01 / 35</span>
+      <div class="lightbox-controls">
+        <button class="lightbox-close-btn" id="lightboxCloseBtn" aria-label="Close Gallery Lightbox">✕</button>
+      </div>
+    </div>
+
+    <div class="lightbox-stage">
+      <button class="lightbox-nav-btn lightbox-prev" id="lightboxPrevBtn" aria-label="Previous Image">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <img src="" alt="" class="lightbox-image" id="lightboxImg" />
+      <button class="lightbox-nav-btn lightbox-next" id="lightboxNextBtn" aria-label="Next Image">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+
+    <div class="lightbox-bottombar">
+      <h3 class="lightbox-title" id="lightboxTitle"></h3>
+      <p class="lightbox-caption" id="lightboxCaption"></p>
     </div>
   </div>
 

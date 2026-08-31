@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initProjectsGrid();
   initProjectModal();
+  initPortfolioGallery();
+  initGalleryLightbox();
   initBeforeAfterSliders();
   initCounters();
   initVisualJournal();
@@ -48,7 +50,7 @@ function initCustomCursor() {
     renderCursor();
 
     // Hover interactive elements
-    const interactiveElements = document.querySelectorAll('a, button, .project-card, .service-item, .concept-card, .calc-chip, .journal-item');
+    const interactiveElements = document.querySelectorAll('a, button, .project-card, .service-item, .concept-card, .calc-chip, .journal-item, .gallery-card, .gallery-filter-btn, .gallery-load-btn');
     interactiveElements.forEach(el => {
       el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
       el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
@@ -432,4 +434,199 @@ function initSmoothScroll() {
       }
     });
   });
+}
+
+/* ==========================================================================
+   12. Portfolio Execution Gallery (35 Authentic Interior Works)
+   ========================================================================== */
+let currentFilteredGallery = [];
+let activeLightboxIndex = 0;
+
+function initPortfolioGallery() {
+  const galleryGrid = document.getElementById('portfolioGalleryGrid');
+  const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+  const loadMoreBtn = document.getElementById('galleryLoadMoreBtn');
+
+  if (!galleryGrid || typeof FOURLINE_PORTFOLIO_GALLERY === 'undefined') return;
+
+  let currentCategory = 'all';
+  let isExpanded = false;
+  const INITIAL_COUNT = 12;
+
+  function renderGallery() {
+    currentFilteredGallery = currentCategory === 'all'
+      ? FOURLINE_PORTFOLIO_GALLERY
+      : FOURLINE_PORTFOLIO_GALLERY.filter(item => item.category === currentCategory);
+
+    const itemsToDisplay = isExpanded ? currentFilteredGallery : currentFilteredGallery.slice(0, INITIAL_COUNT);
+    galleryGrid.innerHTML = '';
+
+    itemsToDisplay.forEach((item, index) => {
+      const card = document.createElement('div');
+      card.className = 'gallery-card';
+      card.setAttribute('data-index', index);
+      card.innerHTML = `
+        <div class="gallery-card-img-wrap">
+          <img src="${item.src}" alt="${item.title}" loading="lazy" />
+          <span class="gallery-badge">${item.categoryLabel}</span>
+          <div class="gallery-zoom-overlay">
+            <div class="gallery-zoom-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-card-info">
+          <h4 class="gallery-card-title">${item.title}</h4>
+          <p class="gallery-card-desc">${item.description}</p>
+        </div>
+      `;
+
+      card.addEventListener('click', () => {
+        openGalleryLightbox(index);
+      });
+
+      galleryGrid.appendChild(card);
+    });
+
+    // Update Load More Button visibility and text
+    if (loadMoreBtn) {
+      if (currentFilteredGallery.length <= INITIAL_COUNT) {
+        loadMoreBtn.style.display = 'none';
+      } else {
+        loadMoreBtn.style.display = 'inline-flex';
+        if (isExpanded) {
+          loadMoreBtn.innerHTML = `Show Less <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>`;
+        } else {
+          loadMoreBtn.innerHTML = `View All ${currentFilteredGallery.length} Works <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>`;
+        }
+      }
+    }
+  }
+
+  // Initial render
+  renderGallery();
+
+  // Filter Button Clicks
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentCategory = btn.getAttribute('data-filter');
+      isExpanded = false;
+      renderGallery();
+    });
+  });
+
+  // Load More Button Click
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', () => {
+      isExpanded = !isExpanded;
+      renderGallery();
+      if (!isExpanded) {
+        galleryGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  }
+}
+
+/* ==========================================================================
+   13. Fullscreen Gallery Lightbox Viewer
+   ========================================================================== */
+function initGalleryLightbox() {
+  const lightbox = document.getElementById('galleryLightbox');
+  const closeBtn = document.getElementById('lightboxCloseBtn');
+  const prevBtn = document.getElementById('lightboxPrevBtn');
+  const nextBtn = document.getElementById('lightboxNextBtn');
+
+  if (!lightbox) return;
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => closeGalleryLightbox());
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navigateGalleryLightbox(-1);
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navigateGalleryLightbox(1);
+    });
+  }
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox || e.target.classList.contains('lightbox-stage')) {
+      closeGalleryLightbox();
+    }
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeGalleryLightbox();
+    if (e.key === 'ArrowLeft') navigateGalleryLightbox(-1);
+    if (e.key === 'ArrowRight') navigateGalleryLightbox(1);
+  });
+}
+
+function openGalleryLightbox(index) {
+  const lightbox = document.getElementById('galleryLightbox');
+  if (!lightbox || !currentFilteredGallery.length) return;
+
+  activeLightboxIndex = index;
+  updateLightboxContent();
+  lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeGalleryLightbox() {
+  const lightbox = document.getElementById('galleryLightbox');
+  if (!lightbox) return;
+  lightbox.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function navigateGalleryLightbox(direction) {
+  if (!currentFilteredGallery.length) return;
+  activeLightboxIndex = (activeLightboxIndex + direction + currentFilteredGallery.length) % currentFilteredGallery.length;
+  updateLightboxContent();
+}
+
+function updateLightboxContent() {
+  const imgEl = document.getElementById('lightboxImg');
+  const counterEl = document.getElementById('lightboxCounter');
+  const titleEl = document.getElementById('lightboxTitle');
+  const captionEl = document.getElementById('lightboxCaption');
+
+  const item = currentFilteredGallery[activeLightboxIndex];
+  if (!item) return;
+
+  if (imgEl) {
+    imgEl.style.opacity = '0';
+    setTimeout(() => {
+      imgEl.src = item.src;
+      imgEl.alt = item.title;
+      imgEl.onload = () => {
+        imgEl.style.opacity = '1';
+      };
+    }, 150);
+  }
+
+  if (counterEl) {
+    const currentNum = String(activeLightboxIndex + 1).padStart(2, '0');
+    const totalNum = String(currentFilteredGallery.length).padStart(2, '0');
+    counterEl.textContent = `${currentNum} / ${totalNum} — ${item.categoryLabel.toUpperCase()}`;
+  }
+
+  if (titleEl) {
+    titleEl.textContent = item.title;
+  }
+
+  if (captionEl) {
+    captionEl.textContent = item.description;
+  }
 }

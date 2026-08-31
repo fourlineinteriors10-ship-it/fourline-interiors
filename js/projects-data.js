@@ -310,3 +310,287 @@ const FOURLINE_JOURNAL = [
     caption: "Acoustic integrity and understated luxury."
   }
 ];
+
+// PDF Portfolio Execution Gallery Data (Extracted from portfolio.pdf — Authentic Interior Works)
+const FOURLINE_PORTFOLIO_GALLERY = [
+  {
+    id: "port-01",
+    src: "assets/portfolio/project-01.jpg",
+    category: "living",
+    categoryLabel: "Living & Lounge",
+    title: "Architectural Partition & Display Unit",
+    description: "Bespoke open shelving with brushed brass trims and warm natural veneer accents."
+  },
+  {
+    id: "port-02",
+    src: "assets/portfolio/project-02.jpg",
+    category: "living",
+    categoryLabel: "Living & Lounge",
+    title: "Expansive Double-Height Living Space",
+    description: "Multi-tier architectural false ceiling with indirect cove ambient illumination."
+  },
+  {
+    id: "port-03",
+    src: "assets/portfolio/project-03.jpg",
+    category: "living",
+    categoryLabel: "Living & Lounge",
+    title: "Geometric Wood Paneling & Media Console",
+    description: "Precision CNC routed natural veneer wall with floating storage credenza."
+  },
+  {
+    id: "port-04",
+    src: "assets/portfolio/project-04.jpg",
+    category: "craft",
+    categoryLabel: "Bespoke Millwork",
+    title: "Custom Fluted Column & Corner Detail",
+    description: "Zero-tolerance carpentry joinery celebrating raw grain and natural wood finishes."
+  },
+  {
+    id: "port-05",
+    src: "assets/portfolio/project-05.jpg",
+    category: "living",
+    categoryLabel: "Living & Lounge",
+    title: "Refined Living & Dining Integration",
+    description: "Seamless transition between informal lounge zone and formal dining hall."
+  },
+  {
+    id: "port-06",
+    src: "assets/portfolio/project-06.jpg",
+    category: "craft",
+    categoryLabel: "Bespoke Millwork",
+    title: "Bespoke Decorative Wall Niche",
+    description: "Recessed architectural wall niches with precision micro-spotlighting for curated art."
+  },
+  {
+    id: "port-07",
+    src: "assets/portfolio/project-07.jpg",
+    category: "bedroom",
+    categoryLabel: "Luxury Bedroom",
+    title: "Master Suite with Upholstered Headboard",
+    description: "Full-height acoustic fabric headboard flanked by tinted bronze mirror paneling."
+  },
+  {
+    id: "port-08",
+    src: "assets/portfolio/project-08.jpg",
+    category: "bedroom",
+    categoryLabel: "Luxury Bedroom",
+    title: "Minimalist Guest Bedroom Suite",
+    description: "Warm timber tones, integrated bedside ledges, and ambient drop pendants."
+  },
+  {
+    id: "port-09",
+    src: "assets/portfolio/project-09.jpg",
+    category: "bedroom",
+    categoryLabel: "Luxury Bedroom",
+    title: "Kids Suite with Integrated Study",
+    description: "Optimized spatial layout featuring ergonomic study workstation and concealed storage."
+  },
+  {
+    id: "port-10",
+    src: "assets/portfolio/project-10.jpg",
+    category: "bedroom",
+    categoryLabel: "Luxury Bedroom",
+    title: "Master Bedroom with Textured Wall Finish",
+    description: "Handcrafted artisan wall wash paired with indirect cove lighting accents."
+  },
+  {
+    id: "port-11",
+    src: "assets/portfolio/project-11.jpg",
+    category: "bedroom",
+    categoryLabel: "Luxury Bedroom",
+    title: "Bespoke Wardrobe & Dressing Suite",
+    description: "Floor-to-ceiling tinted glass wardrobes equipped with internal sensor illumination."
+  },
+  {
+    id: "port-12",
+    src: "assets/portfolio/project-12.jpg",
+    category: "bedroom",
+    categoryLabel: "Luxury Bedroom",
+    title: "Contemporary Bedroom Paneling",
+    description: "Geometric veneer grooving details and cushioned architectural headrest panel."
+  },
+  {
+    id: "port-13",
+    src: "assets/portfolio/project-13.jpg",
+    category: "bedroom",
+    categoryLabel: "Luxury Bedroom",
+    title: "Luxury Bed Suite with Wood Slats",
+    description: "Vertical acoustic timber slat paneling embedded with brushed brass strip inlays."
+  },
+  {
+    id: "port-14",
+    src: "assets/portfolio/project-14.jpg",
+    category: "bedroom",
+    categoryLabel: "Luxury Bedroom",
+    title: "Dressing Vanity & Full-Length Mirror",
+    description: "Floating cantilevered dressing vanity with backlit oval vanity mirror."
+  },
+  {
+    id: "port-15",
+    src: "assets/portfolio/project-15.jpg",
+    category: "bedroom",
+    categoryLabel: "Luxury Bedroom",
+    title: "Executive Bedroom Retreat",
+    description: "Plush padded fabric wall treatments with coordinated custom bedside nightstands."
+  },
+  {
+    id: "port-16",
+    src: "assets/portfolio/project-16.jpg",
+    category: "bedroom",
+    categoryLabel: "Luxury Bedroom",
+    title: "Custom Master Wardrobe System",
+    description: "Lacquered glass slide-door wardrobe with custom organizer compartments."
+  },
+  {
+    id: "port-17",
+    src: "assets/portfolio/project-17.jpg",
+    category: "bedroom",
+    categoryLabel: "Luxury Bedroom",
+    title: "Warm Walnut Master Bedroom",
+    description: "Rich walnut veneer bed surround with integrated smart charging niches."
+  },
+  {
+    id: "port-18",
+    src: "assets/portfolio/project-18.jpg",
+    category: "bedroom",
+    categoryLabel: "Luxury Bedroom",
+    title: "Modern Bedroom Ceiling & Light Trough",
+    description: "Peripheral architectural false ceiling design with soft 3000K warm downlights."
+  },
+  {
+    id: "port-19",
+    src: "assets/portfolio/project-19.jpg",
+    category: "bedroom",
+    categoryLabel: "Luxury Bedroom",
+    title: "Minimalist Suite with Floating Bed Base",
+    description: "Low-profile platform bed design with ambient perimeter LED underglow."
+  },
+  {
+    id: "port-20",
+    src: "assets/portfolio/project-20.jpg",
+    category: "kitchen",
+    categoryLabel: "Modular Kitchen",
+    title: "Sleek Acrylic Modular Kitchen",
+    description: "Dual-tone high-gloss cabinetry with seamless quartz stone countertop."
+  },
+  {
+    id: "port-21",
+    src: "assets/portfolio/project-21.jpg",
+    category: "kitchen",
+    categoryLabel: "Modular Kitchen",
+    title: "Parallel Gourmet Kitchen Layout",
+    description: "Stainless steel modular carcass with soft-close Blum hardware and Gola profiles."
+  },
+  {
+    id: "port-22",
+    src: "assets/portfolio/project-22.jpg",
+    category: "kitchen",
+    categoryLabel: "Modular Kitchen",
+    title: "Integrated Breakfast Island & Bar",
+    description: "Waterfall quartz counter with built-in induction hob and designer overhead chimney."
+  },
+  {
+    id: "port-23",
+    src: "assets/portfolio/project-23.jpg",
+    category: "kitchen",
+    categoryLabel: "Modular Kitchen",
+    title: "L-Shaped Compact Modular Kitchen",
+    description: "Maximized corner carousel storage and heat-resistant toughened glass backsplash."
+  },
+  {
+    id: "port-24",
+    src: "assets/portfolio/project-24.jpg",
+    category: "kitchen",
+    categoryLabel: "Modular Kitchen",
+    title: "Pantry Tall-Unit with Built-in Appliances",
+    description: "Integrated microwave, convection oven, and heavy-duty pull-out pantry rack system."
+  },
+  {
+    id: "port-25",
+    src: "assets/portfolio/project-25.jpg",
+    category: "kitchen",
+    categoryLabel: "Modular Kitchen",
+    title: "Modern Kitchen Storage & Pull-Out Trays",
+    description: "Tandem drawer systems for heavy cookware and customized cutlery partitions."
+  },
+  {
+    id: "port-26",
+    src: "assets/portfolio/project-26.jpg",
+    category: "craft",
+    categoryLabel: "Bespoke Millwork",
+    title: "Custom Dining Table & Seating Area",
+    description: "Solid wood tabletop with chamfered edges and ergonomically upholstered chairs."
+  },
+  {
+    id: "port-27",
+    src: "assets/portfolio/project-27.jpg",
+    category: "craft",
+    categoryLabel: "Bespoke Millwork",
+    title: "CNC Decorative Mandir & Prayer Unit",
+    description: "Intricate CNC cut geometric jaali work with warm backlit acrylic illumination."
+  },
+  {
+    id: "port-28",
+    src: "assets/portfolio/project-28.jpg",
+    category: "commercial",
+    categoryLabel: "Commercial & Office",
+    title: "Corporate Reception Lobby & Desk",
+    description: "Monolithic Corian counter with backlit 3D branding and acoustic timber backdrop."
+  },
+  {
+    id: "port-29",
+    src: "assets/portfolio/project-29.jpg",
+    category: "commercial",
+    categoryLabel: "Commercial & Office",
+    title: "Executive Boardroom & Conference Setup",
+    description: "16-seater conference table with central AV/power cable management and leather seating."
+  },
+  {
+    id: "port-30",
+    src: "assets/portfolio/project-30.jpg",
+    category: "commercial",
+    categoryLabel: "Commercial & Office",
+    title: "Open-Plan Workstation Layout",
+    description: "Modular workstations with acoustic partition screens and organized wire conduits."
+  },
+  {
+    id: "port-31",
+    src: "assets/portfolio/project-31.jpg",
+    category: "commercial",
+    categoryLabel: "Commercial & Office",
+    title: "Managing Director Cabin & Credenza",
+    description: "Executive desk with natural veneer finish, matching credenza, and private lounge suite."
+  },
+  {
+    id: "port-32",
+    src: "assets/portfolio/project-32.jpg",
+    category: "commercial",
+    categoryLabel: "Commercial & Office",
+    title: "Acoustic Glass Meeting Room",
+    description: "Double-glazed soundproof acoustic partitions with matte black architectural frames."
+  },
+  {
+    id: "port-33",
+    src: "assets/portfolio/project-33.jpg",
+    category: "commercial",
+    categoryLabel: "Commercial & Office",
+    title: "Modern Office Breakout & Pantry Area",
+    description: "Café-style high tables, casual seating, and vibrant collaborative feature wall."
+  },
+  {
+    id: "port-34",
+    src: "assets/portfolio/project-34.jpg",
+    category: "commercial",
+    categoryLabel: "Commercial & Office",
+    title: "Corporate Training & Seminar Hall",
+    description: "Tiered executive seating with integrated projector wall and acoustic ceiling baffling."
+  },
+  {
+    id: "port-35",
+    src: "assets/portfolio/project-35.jpg",
+    category: "commercial",
+    categoryLabel: "Commercial & Office",
+    title: "Commercial Corridor & Lighting Design",
+    description: "Linear architectural LED tracks defining clean directional circulation flow."
+  }
+];
